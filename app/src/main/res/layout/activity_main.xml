@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:text="Enter Tip Amount:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/amountText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/tipButton"
         android:layout_width="168dp"
@@ -24,10 +37,40 @@
         android:layout_width="278dp"
         android:layout_height="87dp"
         android:ems="10"
-        android:inputType="number"
-        android:text="Amount"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tipButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:text="$"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/amountText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <Spinner
+        android:id="@+id/tipSpinner"
+        android:layout_width="132dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginBottom="147dp"
+        app:layout_constraintBottom_toTopOf="@+id/tipButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
